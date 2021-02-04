@@ -1,0 +1,11 @@
+.personal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.breakLine{
+  margin-left: 12rem;
+  margin-right: 12rem;
+  background-color: rgb(220, 220, 243);
+
+}
