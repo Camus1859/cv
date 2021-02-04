@@ -1,0 +1,16 @@
+.spacingPersonal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.backgroundColorPersonal{
+  margin-left: 12rem;
+  margin-right: 12rem;
+  background-color:white;
+}
+
+input{
+  border-width:0px;
+  border:none;
+  text-align: center; 
+  }

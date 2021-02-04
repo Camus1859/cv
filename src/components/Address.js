@@ -1,25 +1,77 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 
-
 class UserAddress extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
+    this.state = {
+      address: 'Address',
+      townCity: 'Town/City',
+      country: 'Country',
+      zipCode: 'Zip Code',
+      phone: 'Phone',
+      email: 'Email',
+    };
   }
 
-  render(){
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
+  render() {
     return (
       <div>
-        <p>Address</p>
-        <p>Town/City</p>
-        <p>Country</p>
-        <p>Zip Code</p>
-        <p>Phone</p>
-        <p>Email</p>
-      </div>
-    )
-  }
+        <input
+          type='text'
+          name='address'
+          value={this.state.address}
+          onChange={this.handleChange}
+        />
+        <br></br>
 
+        <input
+          type='text'
+          name='townCity'
+          value={this.state.townCity}
+          onChange={this.handleChange}
+        />
+        <br></br>
+
+        <input
+          type='text'
+          name='country'
+          value={this.state.country}
+          onChange={this.handleChange}
+        />
+        <br></br>
+
+        <input
+          type='text'
+          name='zipCode'
+          value={this.state.zipCode}
+          onChange={this.handleChange}
+        />
+        <br></br>
+
+        <input
+          type='text'
+          name='phone'
+          value={this.state.phone}
+          onChange={this.handleChange}
+        />
+        <br></br>
+
+        <input
+          type='text'
+          name='email'
+          value={this.state.email}
+          onChange={this.handleChange}
+        />
+        <br></br>
+      </div>
+    );
+  }
 }
 
-export default UserAddress
+export default UserAddress;
