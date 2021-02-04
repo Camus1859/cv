@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
+import Btns from './SaveCancelBtn';
 
 class EducationData extends Component {
   constructor(props) {
@@ -32,10 +33,10 @@ class EducationData extends Component {
   render() {
     return (
       <div>
-        <form type='submt' onSumit={this.formSubmit}>
+        <form type='submt' onSubmit={this.formSubmit}>
           <label>Name of University or School:</label>
           <br></br>
-          <input
+          <input 
             type='text'
             name='university'
             value={this.state.university}
@@ -81,8 +82,8 @@ class EducationData extends Component {
             placeholder='Enter GPA'
           />
           <br></br>
-          <button>Save</button>
-          <button>Cancel</button>
+          <Btns />
+       
         </form>
       </div>
     );

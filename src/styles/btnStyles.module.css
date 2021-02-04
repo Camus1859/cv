@@ -1,0 +1,4 @@
+.spaceOut{
+  display: flex;
+  justify-content: space-evenly;
+}
