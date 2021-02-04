@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 
-class UserEducation extends Component {
+class UserWorkExp extends Component {
   constructor(props) {
     super(props);
   }
@@ -10,7 +10,7 @@ class UserEducation extends Component {
   render() {
     return (
       <div>
-        <p>Education</p>
+        <p>Work Experience</p>
         <button>
           <i className='fa fa-plus-circle' aria-hidden='true'></i>
           Add
@@ -20,4 +20,4 @@ class UserEducation extends Component {
   }
 }
 
-export default UserEducation;
+export default UserWorkExp

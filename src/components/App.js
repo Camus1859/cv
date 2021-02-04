@@ -4,6 +4,7 @@ import MyTitle from './Title';
 import Name from './Name';
 import UserAddress from './Address';
 import UserEducation from './Education'
+import UserWorkExp from './WorkExp'
 import styles from '../styles/addressStyles.module.css';
 
 class App extends Component {
@@ -22,6 +23,9 @@ class App extends Component {
           </div>
           <hr></hr>
           <UserEducation />
+          <hr></hr>
+          <UserWorkExp />
+
 
         </div>
       </div>
