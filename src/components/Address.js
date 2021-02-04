@@ -1,5 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
+import personalSection from '../styles/personalSectionStyles.module.css';
+
 
 class UserAddress extends Component {
   constructor(props) {
@@ -22,7 +24,7 @@ class UserAddress extends Component {
   render() {
     return (
       <div>
-        <input
+        <input className={personalSection.input}
           type='text'
           name='address'
           value={this.state.address}
@@ -30,7 +32,7 @@ class UserAddress extends Component {
         />
         <br></br>
 
-        <input
+        <input className={personalSection.input}
           type='text'
           name='townCity'
           value={this.state.townCity}
@@ -38,7 +40,7 @@ class UserAddress extends Component {
         />
         <br></br>
 
-        <input
+        <input className={personalSection.input}
           type='text'
           name='country'
           value={this.state.country}
@@ -46,7 +48,7 @@ class UserAddress extends Component {
         />
         <br></br>
 
-        <input
+        <input className={personalSection.input}
           type='text'
           name='zipCode'
           value={this.state.zipCode}
@@ -54,7 +56,7 @@ class UserAddress extends Component {
         />
         <br></br>
 
-        <input
+        <input className={personalSection.input}
           type='text'
           name='phone'
           value={this.state.phone}
@@ -62,7 +64,7 @@ class UserAddress extends Component {
         />
         <br></br>
 
-        <input
+        <input className={personalSection.input}
           type='text'
           name='email'
           value={this.state.email}

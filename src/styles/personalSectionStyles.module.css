@@ -1,0 +1,11 @@
+.spacing{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.input{
+  border-width:0px;
+  border:none;
+  text-align: center; 
+  }

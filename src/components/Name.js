@@ -1,5 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
+import personalSection from '../styles/personalSectionStyles.module.css';
+
 
 
 class UserName extends Component {
@@ -17,14 +19,14 @@ class UserName extends Component {
   render() {
     return (
       <div>
-        <input
+        <input  className={personalSection.input}
           type='text'
           name="fName"
           value={this.state.fName}
           onChange={this.handleChange}
         />
         <br></br>
-        <input
+        <input className={personalSection.input}
           type='text'
           name="lName"
           value={this.state.lName}
@@ -32,7 +34,7 @@ class UserName extends Component {
 
         />
         <br></br>
-        <input
+        <input className={personalSection.input}
           type='text'
           name="Occ"
           value={this.state.Occ}

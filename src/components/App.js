@@ -6,7 +6,9 @@ import UserAddress from './Address';
 import UserEducation from './Education';
 import UserWorkExp from './WorkExp';
 import UserSkills from './Skills';
-import styles from '../styles/personalInfoStyles.module.css';
+import body from '../styles/bodyStyles.module.css';
+import personalSection from '../styles/personalSectionStyles.module.css';
+
 
 class App extends Component {
   constructor() {
@@ -17,8 +19,8 @@ class App extends Component {
     return (
       <div>
         <MyTitle />
-        <div className={styles.backgroundColorPersonal}>
-          <div className={styles.spacingPersonal}>
+        <div className={body.backgroundColor}>
+          <div className={personalSection.spacing}>
             <Name />
             <UserAddress />
           </div>
