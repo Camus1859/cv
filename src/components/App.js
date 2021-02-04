@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import MyTitle from './Title';
 import Name from './Name';
 import UserAddress from './Address';
-import UserEducation from './Education'
-import UserWorkExp from './WorkExp'
+import UserEducation from './Education';
+import UserWorkExp from './WorkExp';
+import UserSkills from './Skills';
 import styles from '../styles/addressStyles.module.css';
 
 class App extends Component {
@@ -25,8 +26,8 @@ class App extends Component {
           <UserEducation />
           <hr></hr>
           <UserWorkExp />
-
-
+          <hr></hr>
+          <UserSkills />
         </div>
       </div>
     );
