@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import EducationForm from './EducationForm';
+import EducationData from './EducationData';
 
 class UserEducation extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class UserEducation extends Component {
           <i className='fa fa-plus-circle' aria-hidden='true'></i>
           Add
         </button>
-        {this.state.showComponent ? <EducationForm /> : null}
+        {this.state.showComponent ? <EducationData /> : null}
       </div>
     );
   }

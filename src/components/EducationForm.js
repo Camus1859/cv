@@ -2,45 +2,23 @@
 import React, { Component } from 'react';
 import Btns from './SaveCancelBtn';
 
-class EducationData extends Component {
+class EducationForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      university: '',
-      fromDate: '',
-      toDate: '',
-      degree: '',
-      gpa: '',
-    };
   }
 
-  handleChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
-
-  formSubmit = (e) => {
-    e.preventDefault();
-    this.setState({
-      university: this.state.university,
-      fromDate: this.state.fromDate,
-      toDate: this.state.toDate,
-      degree: this.state.degree,
-      gpa: this.state.gpa,
-    });
-  };
-
   render() {
+    const { university, fromDate, toDate, degree, gpa } = this.props.data;
     return (
       <div>
-        <form type='submt' onSubmit={this.formSubmit}>
+        <form type='submt' onSubmit={this.props.formSubmit}>
           <label>Name of University or School:</label>
           <br></br>
-          <input 
+          <input
             type='text'
             name='university'
-            value={this.state.university}
-            onChange={this.handleChange}
+            value={university}
+            onChange={this.props.handleChange}
             placeholder='Enter University Name'
           />
           <br></br>
@@ -48,8 +26,8 @@ class EducationData extends Component {
           <input
             type='text'
             name='fromDate'
-            value={this.state.fromDate}
-            onChange={this.handleChange}
+            value={fromDate}
+            onChange={this.props.handleChange}
             placeholder='YYYY'
           />
           <br></br>
@@ -58,8 +36,8 @@ class EducationData extends Component {
           <input
             type='text'
             name='toDate'
-            value={this.state.toDate}
-            onChange={this.handleChange}
+            value={toDate}
+            onChange={this.props.handleChange}
             placeholder='YYYY'
           />
           <br></br>
@@ -67,8 +45,8 @@ class EducationData extends Component {
           <input
             type='text'
             name='degree'
-            value={this.state.degree}
-            onChange={this.handleChange}
+            value={degree}
+            onChange={this.props.handleChange}
             placeholder='Enter Degree '
           />
           <br></br>
@@ -77,16 +55,16 @@ class EducationData extends Component {
           <input
             type='text'
             name='gpa'
-            value={this.state.gpa}
-            onChange={this.handleChange}
+            value={gpa}
+            onChange={this.props.handleChange}
             placeholder='Enter GPA'
           />
           <br></br>
         </form>
-        <Btns usersData={this.state}/>
+        <Btns usersData={this.props.data} />
       </div>
     );
   }
 }
 
-export default EducationData;
+export default EducationForm;
