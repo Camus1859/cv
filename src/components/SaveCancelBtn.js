@@ -15,19 +15,26 @@ class Btns extends Component {
     this.setState({
       showComponent: true,
     });
-    console.log('removed div')
-    e.target.parentElement.parentElement.remove()
+    if (e.target.parentElement.id === 'hide') {
+      e.target.parentElement.id = `${btn.hidden}`;
+      e.target.parentElement.parentElement.previousElementSibling.remove();
+    }
   };
 
   render() {
     const { university, fromDate, toDate, degree, gpa } = this.props.usersData;
     return (
-      <div className={btn.spaceApart}>
-        <button onClick={this.onClickDisplayUserInfo}>Save</button>
-        {this.state.showComponent ? (
-          <UserInfo data={[university, fromDate, toDate, degree, gpa]} />
-        ) : null}
-        <button>Cancel</button>
+      <div>
+        <div id='hide' className={btn.spaceApart}>
+          <button onClick={this.onClickDisplayUserInfo}>Save</button>
+          <button>Cancel</button>
+        </div>
+
+        <div>
+          {this.state.showComponent ? (
+            <UserInfo data={[university, fromDate, toDate, degree, gpa]} />
+          ) : null}
+        </div>
       </div>
     );
   }

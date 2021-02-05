@@ -33,7 +33,7 @@ class EducationData extends Component {
   render() {
     return (
       <div>
-        <form id="1"type='submt' onSubmit={this.formSubmit}>
+        <form type='submt' onSubmit={this.formSubmit}>
           <label>Name of University or School:</label>
           <br></br>
           <input 
@@ -82,9 +82,8 @@ class EducationData extends Component {
             placeholder='Enter GPA'
           />
           <br></br>
-          <Btns usersData={this.state}/>
-       
         </form>
+        <Btns usersData={this.state}/>
       </div>
     );
   }
