@@ -10,7 +10,7 @@ class UserWorkExp extends Component {
   render() {
     return (
       <div>
-        <p>Work Experience</p>
+        <h2>Work Experience</h2>
         <button>
           <i className='fa fa-plus-circle' aria-hidden='true'></i>
           Add

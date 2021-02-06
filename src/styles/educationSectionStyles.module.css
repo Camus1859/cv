@@ -1,0 +1,15 @@
+.spaceEvenly{
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.spaceLeft{
+  margin-left: 5rem ;
+}
+
+.spaceLeftButton {
+  margin-left: 60rem ;
+
+
+}

@@ -10,7 +10,7 @@ class UserSkills extends Component {
   render(){
     return (
       <div>
-        <p>Skills</p>
+        <h2>Skills</h2>
         <button>
           <i className='fa fa-plus-circle' aria-hidden='true'></i>
           Add

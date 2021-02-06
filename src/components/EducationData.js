@@ -33,7 +33,11 @@ class EducationData extends Component {
   render() {
     return (
       <div>
-        <EducationForm handleChange={this.handleChange} formSubmit={this.formSubmit} data={this.state} />
+        <EducationForm
+          handleChange={this.handleChange}
+          formSubmit={this.formSubmit}
+          data={this.state}
+        />
       </div>
     );
   }

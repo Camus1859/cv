@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import btn from '../styles/btnStyles.module.css';
 import UserInfo from './UserInfo';
 
+
 class Btns extends Component {
   constructor(props) {
     super(props);
@@ -18,11 +19,13 @@ class Btns extends Component {
     if (e.target.parentElement.id === 'hide') {
       e.target.parentElement.id = `${btn.hidden}`;
       e.target.parentElement.parentElement.previousElementSibling.remove();
+      //this.props.increaseCounter()
+      console.log(this.props.counter)
     }
   };
 
   render() {
-    const { university, fromDate, toDate, degree, gpa } = this.props.usersData;
+
     return (
       <div>
         <div id='hide' className={btn.spaceApart}>
@@ -32,7 +35,7 @@ class Btns extends Component {
 
         <div>
           {this.state.showComponent ? (
-            <UserInfo data={[university, fromDate, toDate, degree, gpa]} />
+            <UserInfo idValue={this.props.count} data={this.props.usersData} />
           ) : null}
         </div>
       </div>

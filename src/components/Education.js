@@ -7,25 +7,42 @@ class UserEducation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showComponent: false,
+      value: [],
+      count: 0
     };
   }
 
-  onClickDisplayEducationForm = () => {
+  onClickAddtoCount = () => {
     this.setState({
-      showComponent: true,
+      count: this.state.count + 1
     });
   };
+
+  displayForm = ()  =>{
+    let forms = []
+    for (let i = 0; i < this.state.count; i++) {
+      forms.push(
+        <div key={i}>
+          <EducationData />
+
+        </div>
+      )
+    }
+    return forms.length === 0 ? '' : forms
+  }
 
   render() {
     return (
       <div>
-        <p>Education</p>
-        <button onClick={this.onClickDisplayEducationForm}>
+        <h2>Education</h2>
+        
+        {this.displayForm()}
+        <button onClick={this.onClickAddtoCount}>
           <i className='fa fa-plus-circle' aria-hidden='true'></i>
           Add
         </button>
-        {this.state.showComponent ? <EducationData /> : null}
+
+        
       </div>
     );
   }

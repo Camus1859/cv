@@ -4,7 +4,7 @@ import styles from "../styles/titleStyles.module.css";
 
 class MyTitle extends Component {
   render() {
-    return <div className={styles.title}>CV Builder</div>;
+    return <h1 className={styles.title}>CV Builder</h1>;
   }
 }
 
