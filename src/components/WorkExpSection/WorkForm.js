@@ -1,63 +1,73 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
-import Btns from './SaveCancelBtn';
+import Btns from '../SaveCancelBtn';
 
-class EducationForm extends Component {
+class WorkForm extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const { university, fromDate, toDate, degree, gpa } = this.props.data;
+    const { company, city, from, to, role, description } = this.props.data;
     return (
       <div>
         <form type='submt' onSubmit={this.props.formSubmit}>
-          <label>Name of University or School:</label>
+          <label>Company:</label>
           <br></br>
           <input
             type='text'
-            name='university'
-            value={university}
+            name='company'
+            value={company}
             onChange={this.props.handleChange}
-            placeholder='Enter University Name'
+            placeholder='Enter Work Company'
           />
           <br></br>
-          <label>From:</label> <br></br>
+          <label>City:</label> <br></br>
           <input
             type='text'
-            name='fromDate'
-            value={fromDate}
+            name='city'
+            value={city}
             onChange={this.props.handleChange}
-            placeholder='YYYY'
+            placeholder='Enter City'
           />
           <br></br>
-          <label>To:</label>
+          <label>From:</label>
           <br></br>
           <input
             type='text'
             name='toDate'
-            value={toDate}
+            value={from}
+            onChange={this.props.handleChange}
+            placeholder='YYYY'
+          />
+           <br></br>
+           <label>To:</label>
+           <br></br>
+          <input
+            type='text'
+            name='toDate'
+            value={to}
             onChange={this.props.handleChange}
             placeholder='YYYY'
           />
           <br></br>
-          <label>Degree:</label> <br></br>
+          <label>Role:</label> <br></br>
           <input
             type='text'
-            name='degree'
-            value={degree}
+            name='role'
+            value={role}
             onChange={this.props.handleChange}
-            placeholder='Enter Degree '
+            placeholder='Enter Title '
           />
           <br></br>
-          <label>GPA:</label>
+          <label>Description:</label>
           <br></br>
           <input
             type='text'
-            name='gpa'
-            value={gpa}
+            name='description'
+            value={description}
             onChange={this.props.handleChange}
-            placeholder='Enter GPA'
+            placeholder='Description of duties'
           />
           <br></br>
         </form>
@@ -67,4 +77,4 @@ class EducationForm extends Component {
   }
 }
 
-export default EducationForm;
+export default WorkForm;

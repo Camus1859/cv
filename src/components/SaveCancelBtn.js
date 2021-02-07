@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 import btn from '../styles/btnStyles.module.css';
-import UserInfo from './UserInfo';
-
+import UserInfoEducation from './EducationSection/UserInfoEducation';
+import UserInfoWork from './WorkExpSection/UserInfoWork';
 
 class Btns extends Component {
   constructor(props) {
@@ -19,13 +19,10 @@ class Btns extends Component {
     if (e.target.parentElement.id === 'hide') {
       e.target.parentElement.id = `${btn.hidden}`;
       e.target.parentElement.parentElement.previousElementSibling.remove();
-      //this.props.increaseCounter()
-      console.log(this.props.counter)
     }
   };
 
   render() {
-
     return (
       <div>
         <div id='hide' className={btn.spaceApart}>
@@ -33,11 +30,20 @@ class Btns extends Component {
           <button>Cancel</button>
         </div>
 
+        {/* <div>
+          {this.state.showComponent ? (
+            <UserInfoEducation data={this.props.usersData} />
+          ) : null}
+        </div> */}
+
         <div>
           {this.state.showComponent ? (
-            <UserInfo idValue={this.props.count} data={this.props.usersData} />
+            <UserInfoWork data={this.props.usersData} />
           ) : null}
         </div>
+
+
+
       </div>
     );
   }

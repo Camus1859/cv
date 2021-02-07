@@ -1,22 +1,24 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
-import EducationForm from './EducationForm';
+import WorkForm from './WorkForm';
 
-class EducationData extends Component {
+class WorkData extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      university: '',
-      fromDate: '',
-      toDate: '',
-      degree: '',
-      gpa: '',
+      company: '',
+      city: '',
+      from: '',
+      to: '',
+      role: '',
+      description: '',
     };
   }
 
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+    
   };
 
   formSubmit = (e) => {
@@ -31,9 +33,10 @@ class EducationData extends Component {
   };
 
   render() {
+
     return (
       <div>
-        <EducationForm
+        <WorkForm
           handleChange={this.handleChange}
           formSubmit={this.formSubmit}
           data={this.state}
@@ -43,4 +46,4 @@ class EducationData extends Component {
   }
 }
 
-export default EducationData;
+export default WorkData;

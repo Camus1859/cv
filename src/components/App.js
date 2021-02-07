@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import MyTitle from './Title';
 import Name from './Name';
 import UserAddress from './Address';
-import UserEducation from './Education';
-import UserWorkExp from './WorkExp';
-import UserSkills from './Skills';
+import UserEducation from './EducationSection/Education';
+import UserWorkExp from './WorkExpSection/Work';
+import UserSkills from './SkillsSection/Skills';
 import body from '../styles/bodyStyles.module.css';
 import personalSection from '../styles/personalSectionStyles.module.css';
 

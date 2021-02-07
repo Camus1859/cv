@@ -6,7 +6,10 @@ class DeleteItemBtn extends Component {
     super(props);
   }
 
-  removeItem = () => {};
+  removeItem = (e) => {
+    e.target.parentElement.parentElement.remove()
+    
+  };
 
   render() {
     return (
