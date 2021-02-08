@@ -34,7 +34,7 @@ class UserWorkExp extends Component {
 
   render() {
     return (
-      <div className="h2">
+      <div className="section-name">
       <h2>Work Experience</h2>
       
       {this.displayForm()}

@@ -19,7 +19,7 @@ class Btns extends Component {
       e.target.parentElement.parentElement.previousElementSibling.remove();
     }
 
-    if (e.target.closest('.h2').firstElementChild.textContent === 'Education') {
+    if (e.target.closest('.section-name').firstElementChild.textContent === 'Education') {
       this.setState({
         showComponentUserInfoEducation: true,
         showComponentUserInfoWork: false
@@ -28,7 +28,7 @@ class Btns extends Component {
     }
 
     if (
-      e.target.closest('.h2').firstElementChild.textContent ===
+      e.target.closest('.section-name').firstElementChild.textContent ===
       'Work Experience'
     ) {
       this.setState({
@@ -39,7 +39,6 @@ class Btns extends Component {
     }
   };
 
-  decideSectionClicked = () => {};
 
   render() {
     return (

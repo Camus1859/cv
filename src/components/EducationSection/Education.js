@@ -33,7 +33,7 @@ class UserEducation extends Component {
 
   render() {
     return (
-      <div className="h2">
+      <div className="section-name">
         <h2 >Education</h2>
         
         {this.displayForm()}
