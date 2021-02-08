@@ -9,7 +9,8 @@ class UserInfoWork extends Component {
   }
 
   render() {
-    console.log(this.props.data);
+    console.log('it works')
+
     const userData = this.props.data;
     
 

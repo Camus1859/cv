@@ -35,7 +35,7 @@ class WorkForm extends Component {
           <br></br>
           <input
             type='text'
-            name='toDate'
+            name='from'
             value={from}
             onChange={this.props.handleChange}
             placeholder='YYYY'
@@ -45,7 +45,7 @@ class WorkForm extends Component {
            <br></br>
           <input
             type='text'
-            name='toDate'
+            name='to'
             value={to}
             onChange={this.props.handleChange}
             placeholder='YYYY'

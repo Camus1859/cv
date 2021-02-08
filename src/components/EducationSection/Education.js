@@ -33,8 +33,8 @@ class UserEducation extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Education</h2>
+      <div className="h2">
+        <h2 >Education</h2>
         
         {this.displayForm()}
         <button onClick={this.onClickAddtoCount}>

@@ -24,11 +24,12 @@ class WorkData extends Component {
   formSubmit = (e) => {
     e.preventDefault();
     this.setState({
-      university: this.state.university,
-      fromDate: this.state.fromDate,
-      toDate: this.state.toDate,
-      degree: this.state.degree,
-      gpa: this.state.gpa,
+      company: this.state.company,
+      city: this.state.city,
+      from: this.state.from,
+      to: this.state.to,
+      role: this.state.role,
+      description: this.state.description
     });
   };
 
