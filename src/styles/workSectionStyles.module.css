@@ -1,13 +1,12 @@
 .spaceEvenly{
   display: flex;
-  justify-content: flex-start;
-
+  justify-content: space-between;
 }
 
 .spaceLeft{
-  margin-left: 5rem ;
+  margin-left: 5rem;
 }
 
-.spaceLeftButton {
-  margin-left: 60rem ;
+.spaceRight{
+  margin-right: 5rem;
 }

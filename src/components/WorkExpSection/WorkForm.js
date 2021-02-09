@@ -40,9 +40,9 @@ class WorkForm extends Component {
             onChange={this.props.handleChange}
             placeholder='YYYY'
           />
-           <br></br>
-           <label>To:</label>
-           <br></br>
+          <br></br>
+          <label>To:</label>
+          <br></br>
           <input
             type='text'
             name='to'
@@ -62,13 +62,14 @@ class WorkForm extends Component {
           <br></br>
           <label>Description:</label>
           <br></br>
-          <input
+          <textarea
             type='text'
             name='description'
             value={description}
             onChange={this.props.handleChange}
             placeholder='Description of duties'
-          />
+            rows="4" cols="50"
+          ></textarea>
           <br></br>
         </form>
         <Btns usersData={this.props.data} />

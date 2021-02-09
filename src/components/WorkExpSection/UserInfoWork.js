@@ -9,28 +9,25 @@ class UserInfoWork extends Component {
   }
 
   render() {
-    console.log('it works')
+    console.log('it works');
 
     const userData = this.props.data;
-    
 
     return (
-      <div className={workSection.spaceEvenly}>
-        <div className={workSection.spaceLeft}>
-          <div>{userData.company}</div>
-          <div>
+      <div>
+        <div className={workSection.spaceEvenly}>
+          <div className={workSection.spaceLeft}>
+            <div>{userData.company}</div>
             {userData.from}-{userData.to}
           </div>
-        </div>
-        <div className={workSection.spaceLeft}>
-          <div>{userData.city}</div>
-          <div>{userData.role} </div>
-        </div>
-        <div >
-        <div>{userData.description} </div>
-        </div>
-        <div className={workSection.spaceLeftButton}>
-          <DeleteItemBtn />
+          <div>
+            <div>{userData.city}</div>
+            {userData.role}
+          </div>
+          <div>{userData.description}</div>
+          <div  className={workSection.spaceRight}>
+            <DeleteItemBtn />
+          </div>
         </div>
       </div>
     );
