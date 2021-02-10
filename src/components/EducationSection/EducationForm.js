@@ -11,7 +11,7 @@ class EducationForm extends Component {
     const { university, fromDate, toDate, degree, gpa } = this.props.data;
     return (
       <div>
-        <form type='submt' onSubmit={this.props.formSubmit}>
+        <form onSubmit={this.props.formSubmit}>
           <label>Name of University or School:</label>
           <br></br>
           <input
@@ -60,8 +60,8 @@ class EducationForm extends Component {
             placeholder='Enter GPA'
           />
           <br></br>
+          <Btns usersData={this.props.data} />
         </form>
-        <Btns usersData={this.props.data} />
       </div>
     );
   }

@@ -9,8 +9,8 @@ class UserInfoEducation extends Component {
   }
 
   render() {
-    console.log(this.props.data);
     const userData = this.props.data;
+
 
     return (
       <div>
@@ -29,7 +29,7 @@ class UserInfoEducation extends Component {
             <DeleteItemBtn />
           </div>
         </div>
-      </div>
+        </div>
     );
   }
 }
