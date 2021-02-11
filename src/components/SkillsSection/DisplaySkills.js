@@ -9,13 +9,21 @@ class DisplaySkills extends Component {
   }
 
   render() {
-    const skills = this.props.data;
+    const { data } = this.props;
 
     return (
-      <div className={skillSection.spaceEvenly}>
-        <div className={skillSection.spaceLeft}>{skills}</div>
+      <div>
+        {data.map((skill) => {
+          return (
+            <div className={skillSection.spaceEvenly}>
+              <div className={skillSection.spaceLeft}>{skill}</div>
 
-        <div className={skillSection.spaceRight}> <DeleteItemBtn /></div>
+              <div className={skillSection.spaceRight}>
+                <DeleteItemBtn />
+              </div>
+            </div>
+          );
+        })}
       </div>
     );
   }

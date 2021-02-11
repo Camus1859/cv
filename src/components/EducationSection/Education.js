@@ -27,10 +27,8 @@ class UserEducation extends Component {
       educationData[name] = value;
       return {
         educationData,
-        educationDataHolder: [...this.state.educationDataHolder],
       };
     });
-    console.log(this.state.educationDataHolder);
   };
 
   formSubmit = (e) => {
@@ -52,8 +50,11 @@ class UserEducation extends Component {
     for (let i = 0; i < this.state.count; i++) {
       forms.push(
         <div key={i}>
-          <EducationData handleChange={this.handleChange} formSubmit={this.formSubmit}
-          data={this.state} />
+          <EducationData
+            handleChange={this.handleChange}
+            formSubmit={this.formSubmit}
+            data={this.state}
+          />
         </div>
       );
     }
@@ -61,11 +62,10 @@ class UserEducation extends Component {
   };
 
   render() {
-    console.log(this.state.educationDataHolder)
+    console.log(this.state.educationDataHolder);
     return (
       <div className='section-name'>
         <h2>Education</h2>
-
         {this.displayForm()}
         <button onClick={this.onClickAddtoCount}>
           <i className='fa fa-plus-circle' aria-hidden='true'></i>

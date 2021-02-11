@@ -71,8 +71,8 @@ class WorkForm extends Component {
             rows="4" cols="50"
           ></textarea>
           <br></br>
+          <Btns usersData={this.props.data} />
         </form>
-        <Btns usersData={this.props.data} />
       </div>
     );
   }
